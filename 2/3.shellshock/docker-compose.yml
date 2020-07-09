@@ -1,0 +1,11 @@
+version: '2'
+services:
+ web:
+   image: vulhub/bash:4.3.0-with-httpd
+   ports:
+    - "28080:80"
+   volumes:
+    - ./victim.cgi:/var/www/html/victim.cgi
+    - ./setuid:/setuid
+    - ./setuid2:/setuid2
+    - ./setuid3:/setuid3
